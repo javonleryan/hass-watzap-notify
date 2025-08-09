@@ -1,0 +1,78 @@
+# custom_components/watzap/services.yaml
+send_message:
+  name: Send Message
+  description: Kirim pesan teks ke nomor WhatsApp default yang sudah dikonfigurasi.
+  fields:
+    message:
+      name: Message
+      description: Isi pesan yang akan dikirim.
+      required: true
+      example: "Pintu depan terbuka!"
+      selector:
+        text:
+
+send_image_url:
+  name: Send Image from URL
+  description: Kirim gambar dari URL ke nomor WhatsApp default yang sudah dikonfigurasi.
+  fields:
+    url:
+      name: Image URL
+      description: URL publik dari gambar yang akan dikirim.
+      required: true
+      example: "https://www.home-assistant.io/images/logo-wordmark.svg"
+      selector:
+        text:
+    message:
+      name: Message
+      description: Caption untuk gambar.
+      required: true
+      example: "Ada gerakan terdeteksi di kamera depan."
+      selector:
+        text:
+    separate_caption:
+      name: Separate Caption
+      description: Kirim caption sebagai pesan terpisah (0 = Tidak, 1 = Ya).
+      default: 0
+      selector:
+        number:
+          min: 0
+          max: 1
+
+send_message_group:
+  name: Send Message to Group
+  description: Kirim pesan teks ke grup WhatsApp default yang sudah dikonfigurasi.
+  fields:
+    message:
+      name: Message
+      description: Isi pesan yang akan dikirim.
+      required: true
+      example: "Notifikasi dari Home Assistant."
+      selector:
+        text:
+
+send_image_group:
+  name: Send Image to Group
+  description: Kirim gambar dari URL ke grup WhatsApp default yang sudah dikonfigurasi.
+  fields:
+    url:
+      name: Image URL
+      description: URL publik dari gambar yang akan dikirim.
+      required: true
+      example: "https://example.com/image.jpg"
+      selector:
+        text:
+    message:
+      name: Message
+      description: Caption untuk gambar.
+      required: true
+      example: "Status sistem hari ini."
+      selector:
+        text:
+    separate_caption:
+      name: Separate Caption
+      description: Kirim caption sebagai pesan terpisah (0 = Tidak, 1 = Ya).
+      default: 0
+      selector:
+        number:
+          min: 0
+          max: 1
