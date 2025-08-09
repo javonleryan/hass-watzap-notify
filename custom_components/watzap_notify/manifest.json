@@ -1,8 +1,8 @@
 {
     "domain": "watzap",
     "name": "Watzap.id Notifier",
-    "documentation": "https://github.com/javonleryan/ha-watzap",
-    "issue_tracker": "https://github.com/javonleryan/ha-watzap/issues",
+    "documentation": "https://github.com/javonleryan/hass-watzap-notify",
+    "issue_tracker": "https://github.com/javonleryan/hass-watzap-notify/issues",
     "codeowners": [
         "@javonleryan"
     ],
